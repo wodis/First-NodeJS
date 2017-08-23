@@ -39,3 +39,18 @@ var util = require('./utils');
     });
     console.log('已经执行了');
 }
+
+{
+    function* helloWorldGenerator() {
+        yield 'hello';
+        yield 'world';
+        return 'ending';
+    }
+
+    var hw = helloWorldGenerator();
+    util.print('========');
+    util.print(hw.next());
+    util.print(hw.next());
+    util.print(hw.next());
+    util.print(hw.next());
+}
